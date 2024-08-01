@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/cursor.png'), auto;
+}
+
+.bd {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bd > div {
+    background-color: #333;
+}
+
+.dhk {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-areas: 
+        "area1 area2 area3 area3" 
+        "area4 area4 area5 area6" 
+        "area7 area8 area5 area6"
+        "area7 area9 area9 area6";
+}
+
+.dhk > div {
+    background: #aaf;
+    display: grid;
+    place-items: center;
+}
+
+.dhk > div:first-child {
+    grid-area: area1;
+}
+
+.dhk > div:nth-child(2) {
+    grid-area: area2;
+}
+
+.dhk > div:nth-child(3) {
+    grid-area: area3;
+}
+
+.dhk > div:nth-child(4) {
+    grid-area: area4;
+}
+
+.dhk > div:nth-child(5) {
+    grid-area: area5;
+}
+
+.dhk > div:nth-child(6) {
+    grid-area: area6;
+}
+
+.dhk > div:nth-child(7) {
+    grid-area: area7;
+}
+
+.dhk > div:nth-child(8) {
+    grid-area: area8;
+}
+
+.dhk > div:last-child {
+    grid-area: area9;
+}

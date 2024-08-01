@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 200px;
+    height: 200px;
+    /* background: rgba(100, 200, 150, 0.5); */
+    /* background: linear-gradient(to top right, red, white, green, blue); */
+    /* background: radial-gradient(white 10%, red 40%, green 70%); */
+    background: linear-gradient(to top right, rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.5), rgba(0, 128, 0, 0.5), rgba(0, 0, 255, 0.5)), url("../images/bd.jpg") no-repeat center center/cover;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    border: 20px solid #0866FF;
+    clip-path: polygon(0px 20px, 20px 20px, 20px 0px, 180px 0px, 180px 20px, 200px 20px, 200px 180px, 180px 180px, 180px 200px, 20px 200px, 20px 180px, 0px 180px);
+    position: relative;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 100px);
+}
+
+.pain {
+    width: 160px;
+    height: 160px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

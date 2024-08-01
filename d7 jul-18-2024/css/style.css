@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 200vh;
+}
+
+.main {
+    width: 200px;
+    height: 600px;
+    background: cornflowerblue;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.pain {
+    width: 100px;
+    height: 100px;
+    background: limegreen;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+}
+
+.rain {
+    width: 100px;
+    height: 100px;
+    background: hotpink;
+    position: sticky;
+    top: 40px;
+    left: 40px;
+}
+
+.gain {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+}
+
+.abul {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.abul::before {
+    content: 'Mr. ';
+}
+
+.abul:hover::before {
+    content: attr(data-student);
+}
+
+.abul::after {
+    content: ' Mia';
+}
+
+.babul {
+    width: 200px;
+    height: 200px;
+    background: dodgerblue;
+    margin: 30px auto;
+    position: relative;
+}
+
+.babul::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    transition: 0.5s;
+}
+
+.babul::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    transition: 0.5s;
+}
+
+.babul:hover::before {
+    top: 150px;
+    left: 150px;
+    transform: rotate(360deg);
+}
+
+.babul:hover::after {
+    bottom: 150px;
+    right: 150px;
+    transform: rotate(360deg);
+}

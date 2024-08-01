@@ -1,0 +1,17 @@
+.bd{
+    font-style: italic;
+    color: blue;
+    font-size: 22px;
+    text-decoration: underline;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px red;
+    border: 10px solid rgb(0,155,0);
+    width: max-content;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 10px 10px 10px black, -10px -10px 10px black, 0px 0px 20px #f00 inset;
+    border-radius: 6px;
+}
