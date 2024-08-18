@@ -12,12 +12,12 @@
     background: red;
 }
 
-.menu > li {
+.menu li {
     width: 100%;
     position: relative;
 }
 
-.menu > li > a {
+.menu li a {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -26,7 +26,7 @@
     line-height: 50px;
 }
 
-.menu > li::before {
+.menu li::before {
     content: "";
     width: 0%;
     height: 5px;
@@ -38,6 +38,39 @@
     transition: 0.5s;
 }
 
-.menu > li:hover::before {
+.menu li:hover::before {
     width: 100%;
+}
+
+.snav, .ssnav {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 130%;
+    background: red;
+    width: 100%;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu li:hover .snav {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.snav > li a {
+    font-size: 14px;
+}
+
+.ssnav {
+    top: 0;
+    left: 130%;
+}
+
+.snav >li:hover .ssnav {
+    left: 100%;
+    visibility: visible;
+    opacity: 1;
 }
