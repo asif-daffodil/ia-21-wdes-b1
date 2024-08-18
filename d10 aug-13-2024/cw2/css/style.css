@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    width: 750px;
+    margin: 20px auto;
+    display: flex;
+    list-style: none;
+    background: red;
+}
+
+.menu > li {
+    width: 100%;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    line-height: 50px;
+}
+
+.menu > li:hover {
+    background: blue;
+}

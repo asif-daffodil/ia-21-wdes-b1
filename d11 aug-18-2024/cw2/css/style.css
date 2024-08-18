@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    width: 750px;
+    margin: 20px auto;
+    display: flex;
+    list-style: none;
+    background: red;
+}
+
+.menu > li {
+    width: 100%;
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    line-height: 50px;
+}
+
+.menu > li::before {
+    content: "";
+    width: 0%;
+    height: 5px;
+    background: blue;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.menu > li:hover::before {
+    width: 100%;
+}
