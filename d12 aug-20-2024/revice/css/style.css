@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav  {
+    width: 100%;
+    display: flex;
+    place-items: center;
+    padding: 10px 20px;
+    background: #000;
+}
+
+nav > figure > img {
+    height: 50px;
+}
+
+.navbar {
+    width: 750px;
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar li {
+    list-style: none;
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar li a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.navbar li:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.sub-menui {
+    background: #333;
+    position: absolute;
+    width: 100%;
+    top: 130%;
+    left: 0;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sub-menui > li a {
+    font-size: 14px;
+}
+
+.navbar li:hover .sub-menui {
+    top: 100%; 
+    visibility: visible;
+    opacity: 1;
+}
+
+.kamal {
+    width: 200px;
+    height: 200px;
+    background: hotpink;
+    transition: 0.5s;
+    box-shadow: 10px 10px 10px #000;
+    position: relative;
+}
+
+.kamal:hover {
+    /* transform: translate(50%, 50%); */
+    /* transform: rotate(45deg); */
+    /* transform: rotateZ(360deg); */
+    /* transform: skewY(30deg); */
+    /* transform: translate(50%, 50%) rotate(45deg) skewY(30deg); */
+}
+
+.srabon {
+    position: absolute;
+    animation: sb 2s infinite;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes sb {
+    0% {
+        /* width: 100px;
+        height: 100px; */
+        background: lightpink;
+        /* border-radius: 0%; */
+        /* transform: translate(-50%, -50%) rotate(0deg); */
+        top: 0px;
+        left: 0px;
+    }
+    50% {
+        background: lightblue;
+        /* border-radius: 50%; */
+        /* width: 150px;
+        height: 150px */;
+        /* transform: translate(-50%, -50%) rotate(180deg); */
+        top: 100px;
+        left: 100px;
+    }
+    100% {
+        background: lightpink;
+        /* border-radius: 0%; */
+        /* width: 100px;
+        height: 100px; */
+        /* transform: translate(-50%, -50%) rotate(360deg); */
+        top: 0px;
+        left: 0px;
+    }
+}

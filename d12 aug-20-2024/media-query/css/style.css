@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+}
+
+.main {
+    display: grid;
+}
+
+.main div {
+    border: 1px solid #333;
+}
+
+@media (max-width: 768px){
+    .main {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        grid-gap: 8px;
+    }
+    
+    .main div {
+        padding: 8px;
+        background: lightblue;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .main {
+        grid-template-columns: 1fr 1fr;
+        padding: 16px;
+        grid-gap: 16px;
+    }
+    
+    .main div {
+        padding: 16px;
+        background: lightgreen;
+    }
+}
+
+@media (min-width: 1024px){
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 24px;
+        grid-gap: 24px;
+    }
+    
+    .main div {
+        padding: 24px;
+        background: lightpink;
+    }
+}
