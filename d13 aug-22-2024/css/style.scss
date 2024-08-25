@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bgColor : green;
+@mixin myMix {
+    background: $bgColor;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+
+.dhaka {
+    @include myMix;
+
+    >.dhanmondi {
+        width: 50%;
+        height: 50%;
+        background: hotpink;
+        position: relative;
+
+        &:hover {
+            background: blue;
+            &::before {
+                background: yellow;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 50%;
+            height: 50%;
+            background: red;
+            position: absolute;
+        }
+
+    }
+
+} 
+
+.feni {
+    @include myMix;
+} 

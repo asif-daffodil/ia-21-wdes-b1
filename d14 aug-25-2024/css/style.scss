@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    >nav{
+        display: flex;
+        align-items: center;
+        margin-top: 85px;
+        margin-bottom: 50px;
+        >.brand{
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #3a3a3a;
+        }
+        >ul{
+            display: flex;
+            margin-left: auto;
+            >li{
+                list-style: none;
+                &:not(:last-child){
+                    margin-right: 36px;
+                }
+                >a{
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: #3a3a3a;
+                }
+                &:not(:last-child, :nth-child(5)){
+                    &:hover{
+                        >a{
+                            color: hotpink;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    >.banner{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 475px;
+        >.banner-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            >h1{
+                font-size: 58px;
+                font-weight: 700;
+                color: #3a3a3a;
+                margin-bottom: 16px;
+                line-height: 70px;
+            }
+            >p{
+                font-weight: 500;
+                color: #3a3a3a;
+                margin-bottom: 16px;
+            }
+            >button{
+                background: #E02C6D;
+                width: 196px;
+                height: 44px;
+                border-width: 0;
+                font-weight: 700;
+                color: #fff;
+                border-radius: 41px;
+            }
+        }
+        >.banner-right{
+            display: flex;
+            justify-content: end;
+            background: url("../images/banner-camera-bg.png") no-repeat 100% /contain;
+            >figure{
+                >img{
+                    width: 440px;
+                }
+            }
+        }
+    }
+}
