@@ -86,5 +86,25 @@
                 }
             }
         }
+        margin-bottom: 70px;
+    }
+    >.logo-part{
+        width: 1110px;
+        height: 110px;
+        margin: auto;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-image: linear-gradient(to right, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50%, rgba(192, 204, 218, 0.1) 100%) 1;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        >a{
+            >img{
+                margin: auto;
+            }
+        }
     }
 }
