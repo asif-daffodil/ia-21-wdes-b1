@@ -19,3 +19,9 @@ cityArr.forEach(function(city){
 cityArr.map(function(city){
     console.log(city);
 });
+
+const numbers = [7, 10, 14, 3, 5, 21, 6, 8, 19, 1, 28, 4];
+const luckyNumbers = numbers.filter(function(num){
+    return num % 7 === 0;
+})
+console.log(luckyNumbers);
