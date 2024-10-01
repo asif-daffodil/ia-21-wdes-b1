@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .dhaka {
+            color: brown;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        Hello World
+    </div>
+    <button id="btn1">Red</button>
+    <button id="btn2">Blue</button>
+    <button id="btn3">Toggle</button>
+    <button id="btn4">Multiple CSS</button>
+    <button id="btn5">Add Class</button>
+    <button id="btn6">Remove Class</button>
+    <button id="btn7">Toggle Class</button>
+
+    <script>
+        const btn1 = document.querySelector('#btn1');
+        const btn2 = document.querySelector('#btn2');
+        const text = document.querySelector('#text');
+        const btn3 = document.querySelector('#btn3');
+        const btn4 = document.querySelector('#btn4');
+        const btn5 = document.querySelector('#btn5');
+        const btn6 = document.querySelector('#btn6');
+        const btn7 = document.querySelector('#btn7');
+
+        btn1.addEventListener('click', () => {
+            text.style.color = 'red';
+        });
+
+        btn2.addEventListener('click', () => {
+            text.style.color = 'blue';
+        });
+
+        text.addEventListener('mouseover', () => {
+            text.style.color = 'inherit';
+        });
+
+        btn3.addEventListener('click', () => {
+            text.style.color = text.style.color === 'red' ? 'blue' : 'red';
+        });
+
+        btn4.addEventListener('click', () => {
+            text.style.cssText = `
+            color: red; 
+            font-size: 20px; 
+            background-color: yellow;
+            `;
+        });
+
+        btn5.addEventListener('click', () => {
+            text.classList.add('dhaka');
+        });
+
+        btn6.addEventListener('click', () => {
+            text.classList.remove('dhaka');
+        });
+
+        btn7.addEventListener('click', () => {
+            text.classList.toggle('dhaka');
+        });
+    </script>
+</body>
+</html>

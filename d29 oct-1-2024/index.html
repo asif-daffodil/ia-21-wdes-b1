@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" id="myForm">
+        <input type="text" placeholder="Number 1" name="num1">
+        <input type="text" placeholder="Number 2" name="num2">
+        <button type="submit">Sum</button>
+    </form>
+
+    <div id="showName"></div>
+
+    <script>
+        const myForm = document.querySelector('#myForm');
+        const showName = document.querySelector('#showName');
+        myForm.addEventListener("submit", e => {
+            e.preventDefault();
+            const formData = new FormData(myForm);
+            const num1 = formData.get('num1');
+            const num2 = formData.get('num2');
+            if(isNaN(num1) || isNaN(num2)) {
+                showName.innerHTML = 'Please enter a valid number';
+                myForm.reset();
+                return;
+            }
+
+            const sum = parseInt(num1) + parseInt(num2);
+
+            showName.innerHTML = "Sum : " + sum;
+            myForm.reset();
+        })
+    </script>
+</body>
+</html>
