@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        .clock{
+            width: max-content;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px #333;
+            margin: auto;
+        }
+
+        .date{
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .time{
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .day {
+            text-align: center;
+        }
+
+        .day > div {
+            display: inline-block;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+      <div class="main">
+        <div class="clock">
+            <div class="date"></div>
+            <div class="time"></div>
+            <div class="day"></div>
+        </div>
+      </div>  
+
+
+    <script>
+        const date = document.querySelector('.date');
+        const time = document.querySelector('.time');
+        const day = document.querySelector('.day');
+
+        const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        dayNames.forEach((dayName) => {
+            const div = document.createElement('div');
+            div.textContent = dayName;
+            day.appendChild(div);
+        });
+
+        const showTime = () => {
+            const d = new Date();
+            // const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+            date.textContent = `${d.toLocaleString("default", { day: "2-digit" })} / ${d.toLocaleString("default", { month: "long" })} / ${d.getFullYear()}`;
+    
+            // time.textContent = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    
+            time.textContent = `${d.toLocaleString("default", { hour: "2-digit", minute: "2-digit", second: "2-digit" })}`;
+
+            day.children[d.getDay()].style.backgroundColor = "#333";
+            day.children[d.getDay()].style.color = "#fff";
+        }
+
+        showTime();
+
+        setInterval(showTime, 1000);
+
+
+
+        /*
+            function myFunc () {
+                this.fname = "Asif";
+                this.lname = "Abir";
+
+                //full name method 1
+                this.fullName = function (){
+                    return this.fname + " " + this.lname;
+                }
+            }
+
+            const mf = new myFunc();
+            console.log(mf.fullName());
+        */
+
+    </script>
+</body>
+</html>
